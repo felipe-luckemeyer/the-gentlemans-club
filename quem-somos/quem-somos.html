@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!-- define idioma da página como português do Brasil -->
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quem Somos</title>
+    <!-- css -->
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="quem-somos.css" />
+    <!-- fonte da Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- cabeçalho do site -->
+    <header>
+      <div>
+        <!-- logo com link pra página inicial -->
+        <a class="logo" href="../index.html">
+          <img src="../bigode.png" alt="bigode preto" />
+        </a>
+        <!-- navegação principal do site -->
+        <nav class="menu-desktop">
+          <ul>
+            <!-- item de menu 'Quem Somos' marcado como selecionado -->
+            <li>
+              <a class="selecionado" href="../quem-somos/quem-somos.html"
+                >QUEM SOMOS</a
+              >
+            </li>
+            <li>
+              <a href="../galeria/galeria.html">GALERIA</a>
+            </li>
+            <li>
+              <a href="../avaliacoes/avaliacoes.html">AVALIAÇÕES</a>
+            </li>
+            <li>
+              <a href="../premiacoes/premiacoes.html">PREMIAÇÕES</a>
+            </li>
+            <li>
+              <a href="../agenda/agenda.html">AGENDA</a>
+            </li>
+          </ul>
+
+          <!-- ícone do menu pra dispositivos móveis -->
+          <img
+            class="menu-icon"
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLW1lbnUtaWNvbiBsdWNpZGUtbWVudSI+PHBhdGggZD0iTTQgNWgxNiIvPjxwYXRoIGQ9Ik00IDEyaDE2Ii8+PHBhdGggZD0iTTQgMTloMTYiLz48L3N2Zz4="
+            alt="menu"
+            onclick="mostraMobileMenu()"
+          />
+
+          <script>
+            // funcao pra mostrar o menu
+            function mostraMobileMenu() {
+              document
+                .getElementById("mobile-menu")
+                .setAttribute("class", "mobile-menu-open");
+            }
+            // funcao pra esconder o menu
+            function escondeMobileMenu() {
+              document
+                .getElementById("mobile-menu")
+                .setAttribute("class", "mobile-menu-close");
+            }
+          </script>
+        </nav>
+
+        <nav id="mobile-menu" class="mobile-menu-close">
+          <!-- botão para fechar o menu -->
+          <img
+            class="close-icon"
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXgtaWNvbiBsdWNpZGUteCI+PHBhdGggZD0iTTE4IDYgNiAxOCIvPjxwYXRoIGQ9Im02IDYgMTIgMTIiLz48L3N2Zz4="
+            alt="icone de fechar menu"
+            onclick="escondeMobileMenu()"
+          />
+
+          <!-- lista de links para navegar -->
+          <ul>
+            <li>
+              <a class="selecionado" href="../quem-somos/quem-somos.html"
+                >QUEM SOMOS</a
+              >
+            </li>
+            <li>
+              <a href="../galeria/galeria.html">GALERIA</a>
+            </li>
+            <li>
+              <a href="../avaliacoes/avaliacoes.html">AVALIAÇÕES</a>
+            </li>
+            <li>
+              <a href="../premiacoes/premiacoes.html">PREMIAÇÕES</a>
+            </li>
+            <li>
+              <a href="../agenda/agenda.html">AGENDA</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- conteúdo principal da página 'Quem Somos' -->
+    <main>
+      <section>
+        <!-- primeira coluna: Informações sobre a fundação -->
+        <div class="first-column">
+          <img src="poa.jpg" alt="porto alegre" />
+          <p>
+            Fundada em 2015, em Porto Alegre, The Gentleman’s Club nasceu da
+            união entre tradição e inovação, neah!
+          </p>
+        </div>
+
+        <!-- segunda coluna: Informações sobre os fundadores -->
+        <div class="second-column">
+          <!-- Container para as imagens dos fundadores -->
+          <div style="display: flex">
+            <img
+              class="image-left"
+              src="rodrigo-carvalho.jpg"
+              alt="Rodrigo Carvalho"
+            />
+            <img
+              class="image-right"
+              src="marcelo-dutra.jpg"
+              alt="Marcelo Dutra"
+            />
+          </div>
+          <p>
+            De um lado, a experiência e a visão clássica de Marcelo Dutra. Do
+            outro, a modernidade e o olhar tecnológico de Rodrigo Carvalho.
+          </p>
+        </div>
+
+        <!-- terceira coluna: Informações sobre as unidades -->
+        <div class="third-column">
+          <img src="maps.png" alt="porto alegre" />
+          <p>
+            Hoje, com unidades já consolidadas nos bairros Bela Vista e Moinhos
+            de Vento, The Gentleman’s Club é referência em cuidado masculino com
+            um atendimento impecável.
+          </p>
+        </div>
+      </section>
+    </main>
+    <!-- rodapé do site -->
+    <footer>
+      <p>
+        © 2025 The Gentleman's Club Barber Shop. Todos os direitos reservados.
+      </p>
+    </footer>
+  </body>
+</html>
