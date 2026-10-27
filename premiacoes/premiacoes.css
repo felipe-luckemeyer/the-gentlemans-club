@@ -1,0 +1,97 @@
+/* container principal da página de premiações */
+main {
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2rem;
+}
+
+/* seção do banner principal */
+section.banner {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  height: 300px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: white;
+  background-image: url(../galeria/fundo.png);
+  background-size: cover;
+  margin: 2rem;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+/* títulos h1 dentro do banner */
+section.banner h1 {
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+/* alinhamento do primeiro título h1 no banner */
+section.banner h1.first {
+  align-self: start;
+}
+/* alinhamento do segundo título h1 no banner */
+section.banner h1.second {
+  align-self: end;
+}
+/* texto em negrito (strong) dentro do banner */
+section.banner strong {
+  font-weight: 700;
+}
+/* imagem (tesoura) dentro do banner */
+section.banner img {
+  position: absolute;
+  transform: rotate(45deg);
+  height: 25rem;
+}
+
+/* seção que exibe os prêmios */
+section.premios {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+section.premios div {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+section.premios p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: white;
+  width: 250px;
+}
+
+/* imagem do prêmio "Grooming Awards" */
+img.grooming-awards {
+  height: 110px;
+}
+/* imagem do prêmio "Barber Week" */
+img.barber-week {
+  height: 60px;
+}
+/* imagem do prêmio "Reclame Aqui" */
+img.reclame-aqui {
+  height: 60px;
+}
+/* imagem do prêmio "Forbes" */
+img.forbes {
+  height: 100px;
+}
+
+/* linha horizontal (hr) que separa as seções */
+hr {
+  width: 100%;
+  max-width: 600px;
+}
