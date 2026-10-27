@@ -1,0 +1,208 @@
+/* container principal da página de agendamento */
+main {
+  flex-direction: column;
+  row-gap: 1rem;
+  align-items: center;
+}
+
+/* gerais para as seções da página */
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 1200px;
+  height: fit-content;
+  background-image: url(../galeria/fundo.png);
+  background-size: cover;
+  margin: 2rem;
+  padding: 3rem;
+}
+
+/* título h1 dentro da seção de agendamento */
+section.agendar h1 {
+  color: white;
+  font-size: 1.8rem;
+}
+
+/* específicos para a seção de agendamento */
+section.agendar {
+  display: flex;
+  justify-content: center;
+  font-family: "Chau Philomene One";
+}
+
+/* formulário de agendamento */
+form {
+  background-color: white;
+  max-width: 40rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1rem 0 1rem 0;
+  display: flex;
+  row-gap: 1rem;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* container do input de alergias */
+.input-possui-alergias {
+  display: flex;
+  align-items: center;
+  height: fit-content;
+}
+
+/* remove margem padrão do parágrafo dentro do container de alergias */
+.input-possui-alergias p {
+  margin: 0;
+}
+
+/* estilos para a área de texto (observações) */
+textarea {
+  resize: none;
+  padding: 0.5rem;
+  font-family: "Chau Philomene One";
+}
+
+/* botão de agendamento */
+section.agendar button {
+  color: white;
+  font-family: "Chau Philomene One";
+  border: none;
+  height: 2rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  background-color: black;
+}
+
+/* efeito hover para o botão de agendamento */
+section.agendar button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  transition: all 0.2s ease-in-out;
+}
+
+/* imagem do mapa na seção de agendamento */
+section.agendar img {
+  width: 100%;
+  height: 20rem;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+/* efeito hover para os itens da lista de endereços */
+section.agendar li:hover {
+  background-color: gray;
+  transition: all 0.2s ease-in-out;
+}
+
+/* itens da lista de endereços */
+section.agendar li {
+  padding: 1rem;
+  background-color: black;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+/* item da lista de endereços quando input dentro dele está focado */
+section.agendar li:focus-within {
+  border: 1px solid white;
+}
+
+/* a lista de endereços */
+section.agendar ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding-inline-start: 0;
+  margin: 0;
+  color: white;
+}
+
+/* formulário que contém a lista de endereços */
+section.agendar form.endereco {
+  background-color: unset;
+  padding: 0;
+  margin-top: 0;
+}
+
+/* parágrafos dentro da tag <address> */
+address p {
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* item da lista que indica uma nova unidade em breve */
+section.agendar li.em-breve {
+  display: flex;
+  gap: 1rem;
+  height: 5rem;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed;
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+/* cards de planos de corte/barba */
+section.barba li.corte {
+  background-color: white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+  max-width: 13rem;
+  flex: 1;
+}
+
+/* imagens dentro dos cards de planos */
+section.barba img {
+  width: 4rem;
+}
+
+/* preço (span) dentro dos cards de planos */
+section.barba span {
+  font-family: "Chau Philomene One";
+  font-size: 3rem;
+  color: black;
+}
+
+/* link "Escolher" nos cards de planos */
+section.barba a {
+  width: 100%;
+  height: 2.5rem;
+  align-content: center;
+  text-align: center;
+  border-radius: 0.2rem;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+/* efeito hover para o link "Escolher" */
+section.barba a:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  transition: all 0.2s ease-in-out;
+}
+
+img#publicidade {
+  height: 100px;
+}
+
+tbody tr td {
+  padding: 0.5rem;
+}
+
+
