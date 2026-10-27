@@ -44,11 +44,13 @@ A proposta é praticar, em um caso realista, a construção de um site instituci
 ├── index.css             # estilos compartilhados por todas as páginas
 ├── bigode.png            # logo
 ├── favicon.ico
+├── package.json          # scripts e dependências dos testes
 ├── agenda/
 ├── avaliacoes/
 ├── galeria/
 ├── premiacoes/
-└── quem-somos/
+├── quem-somos/
+└── tests/                # testes automatizados
 ```
 
 Cada página fica em sua própria pasta, com o arquivo `.html`, o arquivo `.css` e as imagens que ela usa.
@@ -73,6 +75,23 @@ python3 -m http.server 8000
 ```
 
 Mapa, vídeos, fonte e GIFs são carregados da internet, então é necessário estar conectado para ver o site completo.
+
+## Testes
+
+Os testes usam [Vitest](https://vitest.dev) e [jsdom](https://github.com/jsdom/jsdom). Cada teste carrega o HTML da página, executa os scripts inline e simula cliques, foco e mouse. Nada é baixado da internet. Só os testes precisam do Node.js (versão 22.13 ou mais nova, 24 ou 26 em diante), o site continua sem etapa de build.
+
+```bash
+npm install
+npm test
+```
+
+Use `npm run test:watch` para rodar os testes de novo a cada alteração.
+
+O jsdom não calcula layout nem aplica o CSS. Os testes verificam classes e estilos definidos pelos scripts, mas não a aparência da página.
+
+Erros nos scripts da página, como uma função que não existe, fazem o teste falhar.
+
+Os testes com "problema conhecido" no nome, e o bloco "problemas conhecidos do HTML" em `tests/paginas.test.js`, descrevem problemas que ainda existem no site, como eles são hoje. Quando o HTML for corrigido, o teste falha e deve ser apagado. Os testes genéricos pulados em `tests/paginas.test.js` voltam a rodar quando a página sai da lista `problemasConhecidos`.
 
 ## Autor
 
