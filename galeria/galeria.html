@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!-- define idioma da página como português do Brasil -->
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galeria</title>
+    <!-- css -->
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="galeria.css" />
+    <!-- fonte da Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- cabeçalho do site -->
+    <header>
+      <div>
+        <!-- logo com link pra página inicial -->
+        <a class="logo" href="../index.html">
+          <img
+            src="../bigode.png"
+            alt="Logo da The Gentleman's Club: um bigode preto"
+          />
+        </a>
+        <!-- navegação principal do site -->
+        <nav class="menu-desktop">
+          <ul>
+            <li>
+              <a href="../quem-somos/quem-somos.html">QUEM SOMOS</a>
+            </li>
+            <!-- item de menu 'Galeria' marcado como selecionado -->
+            <li>
+              <a class="selecionado" href="../galeria/galeria.html">GALERIA</a>
+            </li>
+            <li>
+              <a href="../avaliacoes/avaliacoes.html">AVALIAÇÕES</a>
+            </li>
+            <li>
+              <a href="../premiacoes/premiacoes.html">PREMIAÇÕES</a>
+            </li>
+            <li>
+              <a href="../agenda/agenda.html">AGENDA</a>
+            </li>
+          </ul>
+          <!-- ícone do menu pra visualizar em dispositivos móveis -->
+          <img
+            class="menu-icon"
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLW1lbnUtaWNvbiBsdWNpZGUtbWVudSI+PHBhdGggZD0iTTQgNWgxNiIvPjxwYXRoIGQ9Ik00IDEyaDE2Ii8+PHBhdGggZD0iTTQgMTloMTYiLz48L3N2Zz4="
+            alt="Ícone do menu"
+            onclick="mostraMobileMenu()"
+          />
+          <script>
+            // funcao pra mostrar o menu
+            function mostraMobileMenu() {
+              document
+                .getElementById("mobile-menu")
+                .setAttribute("class", "mobile-menu-open");
+            }
+            // funcao pra esconder o menu
+            function escondeMobileMenu() {
+              document
+                .getElementById("mobile-menu")
+                .setAttribute("class", "mobile-menu-close");
+            }
+          </script>
+        </nav>
+
+        <nav id="mobile-menu" class="mobile-menu-close">
+          <!-- botão para fechar o menu -->
+          <img
+            class="close-icon"
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXgtaWNvbiBsdWNpZGUteCI+PHBhdGggZD0iTTE4IDYgNiAxOCIvPjxwYXRoIGQ9Im02IDYgMTIgMTIiLz48L3N2Zz4="
+            alt="icone de fechar menu"
+            onclick="escondeMobileMenu()"
+          />
+
+          <!-- lista de links para navegar -->
+          <ul>
+            <li>
+              <a href="../quem-somos/quem-somos.html">QUEM SOMOS</a>
+            </li>
+            <li>
+              <a class="selecionado" href="../galeria/galeria.html">GALERIA</a>
+            </li>
+            <li>
+              <a href="../avaliacoes/avaliacoes.html">AVALIAÇÕES</a>
+            </li>
+            <li>
+              <a href="../premiacoes/premiacoes.html">PREMIAÇÕES</a>
+            </li>
+            <li>
+              <a href="../agenda/agenda.html">AGENDA</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- conteúdo principal da página da Galeria -->
+    <main>
+      <script>
+        function mostraOutraImagem(id) {
+          document.getElementById(id).setAttribute("src", "outra-imagem.jpg");
+        }
+        function mostraImagemOriginal(id, src) {
+          document.getElementById(id).setAttribute("src", src);
+        }
+      </script>
+      <!-- seção com uma colagem de fotos no estilo polaroid -->
+      <section>
+        <div class="portrait" style="transform: rotate(7deg)">
+          <img
+            id="img-1"
+            onmousedown="mostraOutraImagem('img-1')"
+            onmouseup="mostraImagemOriginal('img-1', 'img-galeria-01.jpg')"
+            src="img-galeria-01.jpg"
+            alt="Ferramentas de barbeiro organizadas em uma bancada de madeira."
+          />
+        </div>
+        <div class="portrait" style="transform: rotate(-5deg)">
+          <img
+            id="img-2"
+            onmousedown="mostraOutraImagem('img-2')"
+            onmouseup="mostraImagemOriginal('img-2', 'img-galeria-02.jpg')"
+            src="img-galeria-02.jpg"
+            alt="Cadeiras de barbeiro clássicas em um salão com estilo vintage."
+          />
+        </div>
+        <div class="portrait" style="transform: rotate(6deg)">
+          <img
+            id="img-3"
+            onmousedown="mostraOutraImagem('img-3')"
+            onmouseup="mostraImagemOriginal('img-3', 'img-galeria-03.jpg')"
+            src="img-galeria-03.jpg"
+            alt="Barbeiro profissional fazendo um corte de cabelo detalhado em um cliente."
+          />
+        </div>
+        <div class="portrait" style="transform: rotate(-4deg)">
+          <img
+            id="img-4"
+            onmousedown="mostraOutraImagem('img-4')"
+            onmouseup="mostraImagemOriginal('img-4', 'img-galeria-04.jpg')"
+            src="img-galeria-04.jpg"
+            alt="Close-up de uma navalha e outros utensílios de barbearia."
+          />
+        </div>
+        <div class="portrait" style="transform: rotate(-4deg)">
+          <img
+            id="img-5"
+            onmousedown="mostraOutraImagem('img-5')"
+            onmouseup="mostraImagemOriginal('img-5', 'img-galeria-05.png')"
+            src="img-galeria-05.png"
+            alt=""
+          />
+        </div>
+        <div class="portrait" style="transform: rotate(6deg)">
+          <img
+            id="img-6"
+            onmousedown="mostraOutraImagem('img-6')"
+            onmouseup="mostraImagemOriginal('img-6', 'img-galeria-06.png')"
+            src="img-galeria-06.png"
+            alt=""
+          />
+        </div>
+        <div class="portrait" style="transform: rotate(-5deg)">
+          <img
+            id="img-7"
+            onmousedown="mostraOutraImagem('img-7')"
+            onmouseup="mostraImagemOriginal('img-7', 'img-galeria-07.png')"
+            src="img-galeria-07.png"
+            alt=""
+          />
+        </div>
+        <div class="portrait" style="transform: rotate(7deg)">
+          <img
+            id="img-8"
+            onmousedown="mostraOutraImagem('img-8')"
+            onmouseup="mostraImagemOriginal('img-8', 'img-galeria-08.jpg')"
+            src="img-galeria-08.jpg"
+            alt=""
+          />
+        </div>
+      </section>
+      <!-- seção de vídeos incorporados do YouTube -->
+      <section class="video">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/6HxktxLBSCo?si=RXEC-KGWkrIo_siX"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/IfWOYnyiyt4?si=kRYHw5bcMeXIbwvF"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </section>
+    </main>
+    <!-- rodapé do site -->
+    <footer>
+      <p>
+        © 2025 The Gentleman's Club Barber Shop. Todos os direitos reservados.
+      </p>
+    </footer>
+  </body>
+</html>

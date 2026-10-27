@@ -1,0 +1,50 @@
+/* seção principal da página de avaliações */
+section {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  gap: 1rem;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  height: fit-content;
+  background-image: url(../galeria/fundo.png);
+  background-size: cover;
+  margin: 2rem;
+  padding: 3rem;
+}
+
+/* título h1 dentro da seção */
+section h1 {
+  color: white;
+}
+
+/* parágrafos dentro da seção */
+section p {
+  text-align: justify;
+}
+
+/* lista não ordenada que contém as avaliações */
+section ul {
+  padding-inline-start: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+/* cada item da lista */
+section li {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  max-width: 530px;
+}
+
+/* conjunto de elementos que formam as 5 estrelas */
+figure {
+  padding: 0;
+  margin: 0;
+}

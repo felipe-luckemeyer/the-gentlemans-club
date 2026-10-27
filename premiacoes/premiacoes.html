@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!-- define idioma da página como português do Brasil -->
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Premiações</title>
+    <!-- css -->
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="premiacoes.css" />
+    <!-- fonte da Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- cabeçalho do site -->
+    <header>
+      <div>
+        <a class="logo" href="../index.html">
+          <img
+            src="../bigode.png"
+            alt="Logo da The Gentleman's Club: um bigode preto"
+          />
+        </a>
+        <nav class="menu-desktop">
+          <ul>
+            <li>
+              <a href="../quem-somos/quem-somos.html">QUEM SOMOS</a>
+            </li>
+            <li>
+              <a href="../galeria/galeria.html">GALERIA</a>
+            </li>
+            <li>
+              <a href="../avaliacoes/avaliacoes.html">AVALIAÇÕES</a>
+            </li>
+            <li>
+              <a class="selecionado" href="../premiacoes/premiacoes.html"
+                >PREMIAÇÕES</a
+              >
+            </li>
+            <li>
+              <a href="../agenda/agenda.html">AGENDA</a>
+            </li>
+          </ul>
+          <!-- ícone do menu pra visualizar em dispositivos móveis -->
+          <img
+            class="menu-icon"
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLW1lbnUtaWNvbiBsdWNpZGUtbWVudSI+PHBhdGggZD0iTTQgNWgxNiIvPjxwYXRoIGQ9Ik00IDEyaDE2Ii8+PHBhdGggZD0iTTQgMTloMTYiLz48L3N2Zz4="
+            alt="Ícone do menu"
+            onclick="mostraMobileMenu()"
+          />
+
+          <script>
+            // funcao pra mostrar o menu
+            function mostraMobileMenu() {
+              document
+                .getElementById("mobile-menu")
+                .setAttribute("class", "mobile-menu-open");
+            }
+            // funcao pra esconder o menu
+            function escondeMobileMenu() {
+              document
+                .getElementById("mobile-menu")
+                .setAttribute("class", "mobile-menu-close");
+            }
+          </script>
+        </nav>
+
+        <nav id="mobile-menu" class="mobile-menu-close">
+          <!-- botão para fechar o menu -->
+          <img
+            class="close-icon"
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXgtaWNvbiBsdWNpZGUteCI+PHBhdGggZD0iTTE4IDYgNiAxOCIvPjxwYXRoIGQ9Im02IDYgMTIgMTIiLz48L3N2Zz4="
+            alt="icone de fechar menu"
+            onclick="escondeMobileMenu()"
+          />
+
+          <!-- lista de links para navegar -->
+          <ul>
+            <li>
+              <a href="../quem-somos/quem-somos.html">QUEM SOMOS</a>
+            </li>
+            <li>
+              <a href="../galeria/galeria.html">GALERIA</a>
+            </li>
+            <li>
+              <a href="../avaliacoes/avaliacoes.html">AVALIAÇÕES</a>
+            </li>
+            <li>
+              <a class="selecionado" href="../premiacoes/premiacoes.html"
+                >PREMIAÇÕES</a
+              >
+            </li>
+            <li>
+              <a href="../agenda/agenda.html">AGENDA</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- conteúdo principal da página de premiações -->
+    <main>
+      <!-- seção de banner com título e imagem decorativa -->
+      <section class="banner">
+        <h1 class="first">Quando <strong>você</strong> se sente bem,</h1>
+        <img src="tesoura.png" alt="Ícone de uma tesoura de barbeiro" />
+        <h1 class="second">o <strong>mundo</strong> percebe.</h1>
+      </section>
+      <!-- linha horizontal -->
+      <hr />
+      <!-- seção que lista os prêmios recebidos -->
+      <section class="premios">
+        <div>
+          <img
+            class="grooming-awards"
+            src="grooming-awards.png"
+            alt="Logo do prêmio Grooming Awards"
+          />
+          <p>Premio Brasil Grooming Awards 2023</p>
+        </div>
+        <div>
+          <img
+            class="barber-week"
+            src="barber-week.png"
+            alt="Logo do evento Barber Week"
+          />
+          <p>Expositor Destaque Barber Week 2023</p>
+        </div>
+        <div>
+          <img
+            class="reclame-aqui"
+            src="reclame-aqui.png"
+            alt="Logo do prêmio Reclame Aqui"
+          />
+          <p>Premio Reclame Aqui 2024</p>
+        </div>
+        <div>
+          <img class="forbes" src="forbes.png" alt="Logo da revista Forbes" />
+          <p>Destaque Forbes Top 100 Listed Companies 2025</p>
+        </div>
+      </section>
+    </main>
+    <!-- rodapé do site -->
+    <footer>
+      <p>
+        © 2025 The Gentleman's Club Barber Shop. Todos os direitos reservados.
+      </p>
+    </footer>
+  </body>
+</html>

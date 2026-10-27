@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<!-- define idioma da página como português do Brasil -->
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agenda</title>
+    <!-- css -->
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="agenda.css" />
+    <!-- fonte da Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- cabeçalho do site -->
+    <header>
+      <div>
+        <!-- logo com link pra página inicial -->
+        <a class="logo" href="../index.html">
+          <img src="../bigode.png" alt="bigode preto" />
+        </a>
+        <!-- navegação principal do site -->
+        <nav class="menu-desktop">
+          <ul>
+            <li>
+              <a href="../quem-somos/quem-somos.html">QUEM SOMOS</a>
+            </li>
+            <li>
+              <a href="../galeria/galeria.html">GALERIA</a>
+            </li>
+            <li>
+              <a href="../avaliacoes/avaliacoes.html">AVALIAÇÕES</a>
+            </li>
+            <li>
+              <a href="../premiacoes/premiacoes.html">PREMIAÇÕES</a>
+            </li>
+            <li>
+              <!-- item de menu 'Agenda' marcado como selecionado -->
+              <a class="selecionado" href="../agenda/agenda.html">AGENDA</a>
+            </li>
+          </ul>
+          <!-- ícone do menu pra visualizar em dispositivos móveis -->
+          <img
+            class="menu-icon"
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLW1lbnUtaWNvbiBsdWNpZGUtbWVudSI+PHBhdGggZD0iTTQgNWgxNiIvPjxwYXRoIGQ9Ik00IDEyaDE2Ii8+PHBhdGggZD0iTTQgMTloMTYiLz48L3N2Zz4="
+            alt="menu"
+            onclick="mostraMobileMenu()"
+          />
+
+          <script>
+            // funcao pra mostrar o menu
+            function mostraMobileMenu() {
+              document
+                .getElementById("mobile-menu")
+                .setAttribute("class", "mobile-menu-open");
+            }
+            // funcao pra esconder o menu
+            function escondeMobileMenu() {
+              document
+                .getElementById("mobile-menu")
+                .setAttribute("class", "mobile-menu-close");
+            }
+          </script>
+        </nav>
+
+        <nav id="mobile-menu" class="mobile-menu-close">
+          <!-- botão para fechar o menu -->
+          <img
+            class="close-icon"
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXgtaWNvbiBsdWNpZGUteCI+PHBhdGggZD0iTTE4IDYgNiAxOCIvPjxwYXRoIGQ9Im02IDYgMTIgMTIiLz48L3N2Zz4="
+            alt="icone de fechar menu"
+            onclick="escondeMobileMenu()"
+          />
+
+          <!-- lista de links para navegar -->
+          <ul>
+            <li>
+              <a href="../quem-somos/quem-somos.html">QUEM SOMOS</a>
+            </li>
+            <li>
+              <a href="../galeria/galeria.html">GALERIA</a>
+            </li>
+            <li>
+              <a href="../avaliacoes/avaliacoes.html">AVALIAÇÕES</a>
+            </li>
+            <li>
+              <a href="../premiacoes/premiacoes.html">PREMIAÇÕES</a>
+            </li>
+            <li>
+              <a class="selecionado" href="../agenda/agenda.html">AGENDA</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- conteúdo principal da página de agenda -->
+    <main>
+      <!-- seção para escolha dos serviços (cortes) -->
+      <section class="barba">
+        <h1 style="color: white">Escolha seu corte</h1>
+        <!-- lista de serviços disponíveis -->
+        <ul
+          style="
+            display: flex;
+            column-gap: 3rem;
+            justify-content: center;
+            width: 100%;
+            padding-inline-start: 0;
+          "
+        >
+          <!-- item de serviço: Barba Clássica -->
+          <li class="corte">
+            <h2>Barba Classica</h2>
+            <span>R$ 35</span>
+            <ul
+              style="
+                padding-inline-start: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+              "
+            >
+              <li>Corte Tradicional</li>
+              <li>Ajuste no comprimento</li>
+              <li>Acabamento c/ toalha</li>
+              <li>Arremate c/ pós-barba</li>
+            </ul>
+            <a href="#agendar">Escolher</a>
+            <!-- link para a seção de agendamento -->
+          </li>
+          <!-- item de serviço: Barba Premium -->
+          <li class="corte" style="background-color: white">
+            <h2>Barba Premium</h2>
+            <span>R$ 55</span>
+            <ul
+              style="
+                padding-inline-start: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+              "
+            >
+              <li>Modelagem personalizada</li>
+              <li>Hidratação c/ óleos</li>
+              <li>Toalha quente e massagem</li>
+              <li>Arremate c/ balm hidratante</li>
+            </ul>
+            <a href="#agendar">Escolher</a>
+          </li>
+          <!-- item de serviço: Gentleman's Touch -->
+          <li class="corte" style="background-color: white">
+            <div
+              style="display: flex; flex-direction: column; align-items: center"
+            >
+              <img src="../bigode.png" alt="Logo da The Gentleman's Club" />
+              <h2 style="margin-top: 0">Gentleman’s Touch</h2>
+            </div>
+            <span>R$ 85</span>
+            <ul
+              style="
+                padding-inline-start: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+              "
+            >
+              <li>Modelagem c/ navalha</li>
+              <li>Esfoliação Facial</li>
+              <li>Hidratação c/ óleos</li>
+              <li>Massagem relaxante</li>
+              <li>Arremate <strong>Gentleman</strong></li>
+            </ul>
+            <!-- link para a seção de agendamento -->
+            <a href="#agendar">Escolher</a>
+          </li>
+        </ul>
+      </section>
+
+      <script>
+        function mostraMensagemPublicidade() {
+          // cria elemento
+          const spanElement = document.createElement("span");
+          // adicionar texto
+          spanElement.textContent = "Publicidade falsa para fins educativos!";
+          // cria estilo
+          spanElement.style.color = "white";
+          spanElement.style.position = "absolute";
+          spanElement.style.placeSelf = "anchor-center";
+          spanElement.style.fontSize = "22px";
+          // adicionar id
+          spanElement.id = "publicidade-falsa";
+          // adiciona span no container
+          document
+            .getElementById("publicidade-container")
+            .appendChild(spanElement);
+          // adicionar filtro escuro na publicidade
+          document.getElementById("publicidade").style.filter =
+            "brightness(0.25)";
+        }
+
+        function escondeMensagemPublicidade() {
+          // remove span adicionado
+          document.getElementById("publicidade-falsa").remove();
+          // remove filtro da publicidade
+          document.getElementById("publicidade").style.filter = "none";
+        }
+      </script>
+
+      <div
+        id="publicidade-container"
+        style="position: relative"
+        onmouseenter="mostraMensagemPublicidade()"
+        onmouseleave="escondeMensagemPublicidade()"
+      >
+        <img
+          style="position: absolute; right: 0"
+          src="./close-publicidade.png"
+          alt="fechar publicidade"
+        />
+        <img
+          id="publicidade"
+          src="./publicidade.png"
+          alt="Publicidade da padaria Gadea"
+        />
+      </div>
+
+      <!-- seção do formulário de agendamento -->
+      <section id="agendar" class="agendar">
+        <div style="width: 100%; max-width: 60rem">
+          <h1>Sua melhor versão começa aqui:</h1>
+        </div>
+        <div style="display: flex; column-gap: 1rem">
+          <div>
+            <script>
+              function coloreFundo(id) {
+                document.getElementById(id).style.backgroundColor = "gray";
+              }
+              function descoloreFundo(id) {
+                document.getElementById(id).style.backgroundColor = "black";
+              }
+            </script>
+            <!-- formulário para seleção de endereço -->
+            <form class="endereco" action="">
+              <ul id="enderecos-list">
+                <!-- opção de endereço: Bela Vista -->
+                <li id="endereco-1" style="display: flex; gap: 1rem">
+                  <input
+                    type="radio"
+                    id="bela-vista"
+                    name="endereco"
+                    value="bela-vista"
+                    required
+                    onfocus="coloreFundo('endereco-1')"
+                    onblur="descoloreFundo('endereco-1')"
+                  />
+                  <div>
+                    <label for="bela-vista">Bela Vista</label>
+                    <address>
+                      <p>Rua Dona Laura, 842</p>
+                      <p>Bairro Bela Vista, Porto Alegre/RS - 90450-220</p>
+                      <p>(51) 3384-1122</p>
+                    </address>
+                  </div>
+                </li>
+                <!-- opção de endereço: Moinhos de Vento -->
+                <li id="endereco-2" style="display: flex; gap: 1rem">
+                  <input
+                    type="radio"
+                    id="moinhos-de-vento"
+                    name="endereco"
+                    value="moinhos-de-vento"
+                    required
+                    onfocus="coloreFundo('endereco-2')"
+                    onblur="descoloreFundo('endereco-2')"
+                  />
+                  <div>
+                    <label for="moinhos-de-vento">Moinhos de Vento</label>
+                    <address>
+                      <p>Rua Félix da Cunha, 1290</p>
+                      <p>Bairro Moinhos de Vento, Porto Alegre/RS</p>
+                      <p>(51) 3379-9070</p>
+                    </address>
+                  </div>
+                </li>
+                <!-- indicação de nova unidade em breve -->
+                <li class="em-breve">
+                  <p>Em breve nova unidade!</p>
+                </li>
+              </ul>
+            </form>
+            <h2
+              id="horarios-titulo"
+              ondblclick="mudaLinguaHorarios()"
+              style="color: white; margin: 0; cursor: pointer"
+            >
+              Horários:
+            </h2>
+            <!-- tabela com horários de funcionamento -->
+            <table
+              id="horario-table"
+              style="
+                color: white;
+                border: 1px solid white;
+                width: 100%;
+                border-radius: 0.5rem;
+                padding: 1rem;
+              "
+            >
+              <tbody>
+                <tr>
+                  <td id="horario-a-0">Terça/Sexta</td>
+                  <td id="horario-a-1">08:00/11:30</td>
+                  <td id="horario-a-2">13:00/21:30</td>
+                </tr>
+                <tr>
+                  <td id="horario-b-0">Sábado/Segunda</td>
+                  <td id="horario-b-1">Fechado</td>
+                  <td id="horario-b-2">Fechado</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <script>
+              function mudaLinguaHorarios() {
+                const element = document.getElementById("horarios-titulo");
+                if (element.textContent === "Horários:") {
+                  element.textContent = "Hours:";
+                  // pega todos os elementos da tabela pra traduzir
+
+                  // primeira linha
+                  document.getElementById("horario-a-0").textContent =
+                    "Tuesday/Friday";
+                  document.getElementById("horario-a-1").textContent =
+                    "08:00am/11:30am";
+                  document.getElementById("horario-a-2").textContent =
+                    "01:00pm/09:30pm";
+
+                  // segunda linha
+                  document.getElementById("horario-b-0").textContent =
+                    "Saturday/Monday";
+                  document.getElementById("horario-b-1").textContent = "Closed";
+                  document.getElementById("horario-b-2").textContent = "Closed";
+
+                  document.getElementById(
+                    "horario-table"
+                  ).style.backgroundColor = "dimgray";
+                } else {
+                  element.textContent = "Horários:";
+                  // pega todos os elementos da tabela pra traduzir
+
+                  // primeira linha
+                  document.getElementById("horario-a-0").textContent =
+                    "Terça/Sexta";
+                  document.getElementById("horario-a-1").textContent =
+                    "08:00/11:30";
+                  document.getElementById("horario-a-2").textContent =
+                    "13:00/21:30";
+
+                  // segunda linha
+                  document.getElementById("horario-b-0").textContent =
+                    "Sábado/Segunda";
+                  document.getElementById("horario-b-1").textContent =
+                    "Fechado";
+                  document.getElementById("horario-b-2").textContent =
+                    "Fechado";
+
+                  document.getElementById(
+                    "horario-table"
+                  ).style.backgroundColor = "transparent";
+                }
+              }
+            </script>
+          </div>
+          <div>
+            <!-- mapa com localização das barbearias -->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13865.56619523385!2d-51.14758333221615!3d-29.679425751748273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95194375dde66fc5%3A0xf4fa7e4bdf654db3!2sTibet%20Barbearia!5e0!3m2!1spt-BR!2sbr!4v1762717843698!5m2!1spt-BR!2sbr"
+              width="600"
+              height="320"
+              style="border: 0; border-radius: 0.5rem"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+
+            <!-- formulário para dados do cliente e agendamento -->
+            <form class="dados" action="">
+              <div style="display: flex; column-gap: 1rem">
+                <!-- campo Nome e Idade -->
+                <div
+                  class="input-nome"
+                  style="flex: 2; display: flex; gap: 0.5rem"
+                >
+                  <label for="nome">Nome:</label>
+                  <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    required
+                    style="flex: 1"
+                  />
+                </div>
+                <div
+                  class="input-idade"
+                  style="flex: 1; display: flex; gap: 0.5rem"
+                >
+                  <label for="idade">Idade:</label>
+                  <input
+                    type="number"
+                    id="idade"
+                    name="idade"
+                    required
+                    style="flex: 1"
+                  />
+                </div>
+              </div>
+              <!-- campo Data, Horário e Alergias -->
+              <div style="display: flex; column-gap: 1rem">
+                <div class="input-data">
+                  <label for="data">Data:</label>
+                  <input type="date" id="data" name="data" required />
+                </div>
+                <div class="input-horario">
+                  <label for="horario">Horário:</label>
+                  <input type="time" id="horario" name="horario" required />
+                </div>
+                <div class="input-possui-alergias">
+                  <p>Possui alergias?</p>
+                  <div>
+                    <input
+                      type="radio"
+                      id="sim"
+                      name="alergias"
+                      value="sim"
+                      required
+                    />
+                    <label for="sim">Sim</label>
+                  </div>
+                  <div>
+                    <input
+                      type="radio"
+                      id="nao"
+                      name="alergias"
+                      value="nao"
+                      required
+                    />
+                    <label for="nao">Não</label>
+                  </div>
+                </div>
+              </div>
+              <!-- campo de Observações -->
+              <div
+                class="input-observacoes"
+                style="display: flex; flex-direction: column"
+              >
+                <label for="observacoes">Observações:</label>
+                <textarea
+                  id="observacoes"
+                  name="observacoes"
+                  rows="4"
+                  placeholder="Insira informações adicionais aqui"
+                  maxlength="200"
+                ></textarea>
+              </div>
+              <!-- botão de envio do formulário -->
+              <button
+                type="submit"
+                style="width: 10rem; align-self: self-end"
+                onclick="mostraModalSucesso()"
+              >
+                Agendar
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- rodapé do site -->
+    <footer>
+      <p>
+        © 2025 The Gentleman's Club Barber Shop. Todos os direitos reservados.
+      </p>
+    </footer>
+  </body>
+</html>

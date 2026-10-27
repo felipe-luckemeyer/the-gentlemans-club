@@ -1,0 +1,57 @@
+/* container principal da página da galeria */
+main {
+  flex-direction: column;
+  align-items: center;
+}
+
+/* seção de imagens da galeria, organizada em um grid */
+section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  border-radius: 1rem;
+  gap: 1rem;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  height: fit-content;
+  background-image: url(fundo.png);
+  background-size: cover;
+  margin: 2rem;
+  padding: 3rem;
+}
+
+/* telas com largura máxima de 1200px (responsividade) */
+@media (max-width: 1200px) {
+  /* altera o layout da galeria para 3 colunas */
+  section {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  /* faz os vídeos ficarem um abaixo do outro */
+  section.video {
+    flex-direction: column;
+  }
+}
+
+/* cada container de imagem (porta-retrato) */
+div.portrait {
+  justify-self: center;
+  background-color: white;
+  padding: 1rem;
+  width: fit-content;
+  height: 15rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* imagens dentro de cada porta-retrato */
+div.portrait img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+/*  seção contendo vídeos do YouTube */
+section.video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!-- define idioma da página como português do Brasil -->
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Gentleman's Club</title>
+    <!-- css -->
+    <link rel="stylesheet" href="index.css" />
+    <!-- fonte da Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body onload="mostraPromocao()">
+    <!-- cabeçalho do site -->
+    <header>
+      <div>
+        <!-- logo do site como link pra página inicial -->
+        <img
+          src="bigode.png"
+          alt="Logo da The Gentleman's Club: um bigode preto"
+        />
+        <nav class="menu-desktop">
+          <ul>
+            <li>
+              <a href="quem-somos/quem-somos.html">QUEM SOMOS</a>
+            </li>
+            <li>
+              <a href="galeria/galeria.html">GALERIA</a>
+            </li>
+            <li>
+              <a href="avaliacoes/avaliacoes.html">AVALIAÇÕES</a>
+            </li>
+            <li>
+              <a href="premiacoes/premiacoes.html">PREMIAÇÕES</a>
+            </li>
+            <li>
+              <a href="agenda/agenda.html">AGENDA</a>
+            </li>
+          </ul>
+          <!-- ícone do menu pra visualizar em dispositivos móveis -->
+          <img
+            class="menu-icon"
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLW1lbnUtaWNvbiBsdWNpZGUtbWVudSI+PHBhdGggZD0iTTQgNWgxNiIvPjxwYXRoIGQ9Ik00IDEyaDE2Ii8+PHBhdGggZD0iTTQgMTloMTYiLz48L3N2Zz4="
+            alt="menu"
+            onclick="mostraMobileMenu()"
+          />
+
+          <script>
+            // funcao pra mostrar o menu
+            function mostraMobileMenu() {
+              document
+                .getElementById("mobile-menu")
+                .setAttribute("class", "mobile-menu-open");
+            }
+            // funcao pra esconder o menu
+            function escondeMobileMenu() {
+              document
+                .getElementById("mobile-menu")
+                .setAttribute("class", "mobile-menu-close");
+            }
+          </script>
+        </nav>
+
+        <nav id="mobile-menu" class="mobile-menu-close">
+          <!-- botão para fechar o menu -->
+          <img
+            class="close-icon"
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXgtaWNvbiBsdWNpZGUteCI+PHBhdGggZD0iTTE4IDYgNiAxOCIvPjxwYXRoIGQ9Im02IDYgMTIgMTIiLz48L3N2Zz4="
+            alt="icone de fechar menu"
+            onclick="escondeMobileMenu()"
+          />
+
+          <!-- lista de links para navegar -->
+          <ul>
+            <li>
+              <a href="../quem-somos/quem-somos.html">QUEM SOMOS</a>
+            </li>
+            <li>
+              <a href="../galeria/galeria.html">GALERIA</a>
+            </li>
+            <li>
+              <a href="../avaliacoes/avaliacoes.html">AVALIAÇÕES</a>
+            </li>
+            <li>
+              <a href="../premiacoes/premiacoes.html">PREMIAÇÕES</a>
+            </li>
+            <li>
+              <a href="../agenda/agenda.html">AGENDA</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- script contendo a logica para mostrar a promocao -->
+    <script>
+      function mostraPromocao() {
+        setTimeout(() => {
+          document.getElementById("promocao").style.visibility = "visible";
+          document.getElementById("promocao").style.marginTop= "0rem";
+        }, 1000);
+      }
+
+      function escondePromocao() {
+        document.getElementById("promocao").remove();
+      }
+    </script>
+
+    <!-- conteúdo principal da página inicial -->
+    <main>
+      <!-- seção com grid de GIFs e título sobreposto -->
+      <section class="one">
+        <h1 class="title">The Gentleman's Club Barber Shop</h1>
+        <img
+          class="gif gif-top-left"
+          src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTdjOW10MDQyYnZvdGxvZTJlNHd4MGNndXFlbWJwc2gzd2V5dXdxbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l4hmNco31StLkZfJC/giphy.gif"
+          alt="Barbeiro finalizando um corte de cabelo masculino."
+        />
+        <img
+          class="gif gif-top-right"
+          src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmV0ZjV4bnYzdzJtazh0M3JiYmc3dG5uY2t4cGFpb3hiaDhkcHZocCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l4hmIoJsgvuWecLBe/giphy.gif"
+          alt="Barbeiro aplicando produto no cabelo de um cliente."
+        />
+        <img
+          class="gif gif-bottom-left"
+          src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNnI3OXUwZXF2ZW13ZW43ZzNnOGplNmxydHQ1b3Y1OWtlc2F0NWJ5MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l4hmR5p9xmylsTUhq/giphy.gif"
+          alt="Barbeiro usando uma navalha para aparar a barba de um cliente."
+        />
+        <img
+          class="gif gif-bottom-right"
+          src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGdwcWZ2NzllM291N2l1ZHZmeDI5aHdqb3VkMnMzM3o4NTJoYWMxeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oGNDNMtCmVgS5jLIA/giphy.gif"
+          alt="Barbeiro penteando o cabelo de um cliente."
+        />
+      </section>
+      <div id="promocao">
+        <h2>Promoção The Gentleman's Friday!</h2>
+        <p>
+          Presentei um amigo com um corte
+          <strong>Gentleman’s Touch</strong> totalmente por nossa conta!
+        </p>
+        <div>
+          <button onclick="escondePromocao()">Vou Pensar</button>
+          <button onclick="escondePromocao()">Quero Participar</button>
+        </div>
+      </div>
+    </main>
+    <!-- rodapé do site -->
+    <footer>
+      <p>
+        © 2025 The Gentleman's Club Barber Shop. Todos os direitos reservados.
+      </p>
+    </footer>
+  </body>
+</html>

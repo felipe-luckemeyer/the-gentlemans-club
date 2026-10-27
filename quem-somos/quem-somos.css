@@ -1,0 +1,72 @@
+/* seção principal da página "Quem Somos" */
+section {
+  display: flex;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 1200px;
+  height: fit-content;
+  background-image: url(../galeria/fundo.png);
+  background-size: cover;
+  margin: 2rem;
+  padding: 3rem;
+  column-gap: 2rem;
+}
+
+/* parágrafos dentro da seção */
+section p {
+  text-align: justify;
+  color: white;
+  font-family: "Chau Philomene One";
+}
+
+/* primeira coluna de conteúdo */
+div.first-column {
+  flex: 1;
+}
+
+/* imagem na primeira coluna */
+div.first-column img {
+  height: 240px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  filter: grayscale(100%);
+}
+
+/* segunda coluna de conteúdo */
+div.second-column {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+/* imagens na segunda coluna */
+div.second-column img {
+  height: 240px;
+  width: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+/* arredonda as bordas da imagem à esquerda na segunda coluna */
+img.image-left {
+  border-radius: 0.5rem 0rem 0rem 0.5rem;
+}
+/* arredonda as bordas da imagem à direita na segunda coluna */
+img.image-right {
+  border-radius: 0rem 0.5rem 0.5rem 0rem;
+}
+
+/* terceira coluna de conteúdo */
+div.third-column {
+  flex: 1;
+}
+
+/* imagem na terceira coluna */
+div.third-column img {
+  height: 240px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  filter: grayscale(100%);
+}
