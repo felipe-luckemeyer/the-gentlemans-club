@@ -1,0 +1,224 @@
+/* estilos globais para os elementos html e body */
+html,
+body {
+  height: 100%;
+  margin: 0; /* remove a margem padrão do body */
+  padding: 0; /* remove o padding padrão do body */
+  scroll-behavior: smooth;
+}
+
+/* cabeçalho do site */
+header {
+  background-color: white;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* container principal dentro do cabeçalho */
+header div {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 2rem 0 2rem;
+}
+
+/* imagem do logo no cabeçalho */
+header img {
+  width: 5rem;
+}
+
+/* ícone de menu (hambúrguer), escondido por padrão */
+img.menu-icon {
+  display: none;
+}
+
+/* link de navegação da página atual */
+header a.selecionado {
+  text-decoration: underline;
+  color: gray;
+}
+
+/* garante que o link do logo se comporte como um bloco flexível */
+header a.logo {
+  display: flex;
+}
+
+/* estilos gerais para todos os links */
+a {
+  color: black;
+  font-family: "Chau Philomene One";
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+/* efeito hover para todos os links */
+a:hover {
+  text-decoration: underline;
+}
+
+/* barra de navegação no cabeçalho */
+header nav.menu-desktop {
+  display: flex;
+  flex: 1;
+  max-width: 800px;
+  margin-left: 10rem;
+  justify-content: end;
+}
+
+/* lista de links de navegação */
+header ul {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+
+/* remove os marcadores de lista dos itens da navegação */
+header li {
+  list-style-type: none;
+}
+
+/* seção principal do conteúdo */
+main {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+
+/* rodapé do site */
+footer {
+  background-color: white;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* primeira seção na página inicial */
+section.one {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+
+/* GIFs na página inicial */
+.gif {
+  filter: brightness(0.4);
+  width: 100%;
+  max-width: 600px;
+}
+
+/* título principal sobreposto aos GIFs */
+h1.title {
+  position: absolute;
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  z-index: 1;
+  width: 30rem;
+  line-height: 3.5rem;
+  justify-self: center;
+}
+
+/* media query para telas com largura máxima de 900px (responsividade) */
+@media (max-width: 900px) {
+  /* título para telas menores */
+  h1.title {
+    font-size: 2rem;
+    width: 25rem;
+  }
+  /* exibe o ícone de menu e o torna clicável */
+  img.menu-icon {
+    display: inline;
+    width: 2rem;
+    cursor: pointer;
+  }
+  /* esconde a lista de navegação principal */
+  nav ul {
+    display: none;
+  }
+}
+
+div#promocao {
+  position: absolute;
+  background-color: white;
+  padding: 2rem;
+  align-self: center;
+  margin-top: 10rem;
+  z-index: 2;
+  border-radius: 0.5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+
+  visibility: hidden;
+
+  transition: all ease-in-out 0.1s;
+}
+
+div#promocao h2 {
+  margin: unset;
+}
+div#promocao p {
+  margin: unset;
+}
+
+nav.mobile-menu-open {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: white;
+  width: 20rem;
+  height: 100%;
+  z-index: 10;
+  padding: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: all ease-in-out 0.2s;
+  visibility: visible;
+
+
+  display: flex;
+  flex-direction: column;
+}
+
+nav.mobile-menu-open ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: unset;
+}
+
+img.close-icon {
+  align-self: flex-end;
+  width: 2rem;
+  cursor: pointer;
+}
+
+nav.mobile-menu-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: white;
+  width: 0rem;
+  height: 100%;
+  z-index: 10;
+  padding: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: all ease-in-out 0.2s;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+nav.mobile-menu-close ul {
+  display: none;
+}
